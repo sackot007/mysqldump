@@ -1,0 +1,5 @@
+[client]
+host=localhost
+socket=/var/run/mysql-registry/mysqld.sock
+user=root
+password=password
