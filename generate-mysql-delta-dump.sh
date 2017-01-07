@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 SCHEMA_NAME=$1
@@ -11,7 +10,7 @@ DELTA_CONDITION=''
 if [ ! $TABLE_NAME = "Notification" ]
 then
         echo "In If"
-        DELTA_CONDITION='--where=LastUpdatedTime>CURDATE()-2'
+        DELTA_CONDITION='--where=DATE(LastUpdatedTime)=DATE(CURDATE()-1)'
 fi
 
 echo $DELTA_CONDITION
